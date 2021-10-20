@@ -94,12 +94,14 @@ module.exports = {
         'react/prop-types': OFF,
         'react-hooks/rules-of-hooks': 'error',
         'react-hooks/exhaustive-deps': 'warn',
+        'react/no-unescaped-entities': OFF,
 
         'jsx-a11y/click-events-have-key-events': OFF,
         'jsx-a11y/no-noninteractive-element-interactions': OFF,
         'jsx-a11y/no-static-element-interactions': OFF,
 
         'lines-between-class-members': [ERROR, 'always'],
+        'lines-around-comment': [ERROR, { beforeBlockComment: true }],
         // indent: [ERROR, 2, { SwitchCase: 1 }],
         'linebreak-style': [ERROR, 'unix'],
         quotes: [ERROR, 'single'],
