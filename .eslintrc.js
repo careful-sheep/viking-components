@@ -5,7 +5,7 @@ const ERROR = 2;
 module.exports = {
     env: {
         browser: true,
-        es2021: true,
+        es2021: true
     },
     extends: [
         'airbnb',
@@ -14,23 +14,23 @@ module.exports = {
         'plugin:unicorn/recommended',
         'plugin:promise/recommended',
         'plugin:@typescript-eslint/recommended',
-        'plugin:prettier/recommended',
+        'plugin:prettier/recommended'
     ],
     parser: '@typescript-eslint/parser',
     parserOptions: {
         ecmaFeatures: {
-            jsx: true,
+            jsx: true
         },
         ecmaVersion: 12,
-        sourceType: 'module',
+        sourceType: 'module'
     },
     plugins: ['react', 'unicorn', 'promise', '@typescript-eslint'],
     settings: {
         'import/resolver': {
             node: {
-                extensions: ['.tsx', '.ts', '.js', '.json'],
-            },
-        },
+                extensions: ['.tsx', '.ts', '.js', '.json']
+            }
+        }
     },
     rules: {
         'import/extensions': [
@@ -40,8 +40,8 @@ module.exports = {
                 ts: 'never',
                 tsx: 'never',
                 json: 'never',
-                js: 'never',
-            },
+                js: 'never'
+            }
         ],
         'import/no-extraneous-dependencies': [ERROR, { devDependencies: true }],
         'import/prefer-default-export': OFF,
@@ -61,9 +61,9 @@ module.exports = {
                     // 下划线
                     snakeCase: false,
                     // 大驼峰
-                    pascalCase: true,
-                },
-            },
+                    pascalCase: true
+                }
+            }
         ],
         'unicorn/no-array-instanceof': WARN,
         'unicorn/no-for-loop': WARN,
@@ -82,7 +82,9 @@ module.exports = {
         '@typescript-eslint/no-explicit-any': OFF,
         '@typescript-eslint/no-use-before-define': ERROR,
         '@typescript-eslint/no-unused-vars': WARN,
+        '@typescript-eslint/no-shadow': ['error'],
         'no-unused-vars': OFF,
+        'no-shadow': OFF,
 
         'react/jsx-filename-extension': [ERROR, { extensions: ['.tsx', 'ts', '.jsx', 'js'] }],
         'react/jsx-indent-props': [ERROR, 4],
@@ -95,6 +97,8 @@ module.exports = {
         'react-hooks/rules-of-hooks': 'error',
         'react-hooks/exhaustive-deps': 'warn',
         'react/no-unescaped-entities': OFF,
+        'react/default-props-match-prop-types': OFF,
+        'react/button-has-type': OFF,
 
         'jsx-a11y/click-events-have-key-events': OFF,
         'jsx-a11y/no-noninteractive-element-interactions': OFF,
@@ -116,5 +120,6 @@ module.exports = {
         'no-restricted-syntax': OFF,
         'no-continue': OFF,
         'no-multiple-empty-lines': ERROR,
-    },
+        'prettier/prettier': ['error', { trailingComma: 'none' }]
+    }
 };
