@@ -6,15 +6,18 @@ function App() {
         <div className="App">
             <header className="App-header">
                 <Button>hello</Button>
-                <Button disabled>hello</Button>
+                <Button disabled>disabled Button</Button>
                 <Button btnType={ButtonType.Primary} size={ButtonSize.Large}>
-                    hello
+                    large Primary
+                </Button>
+                <Button btnType={ButtonType.Error} size={ButtonSize.Small}>
+                    small Error
                 </Button>
                 <Button btnType={ButtonType.Link} href="http://www.baidu.com">
-                    hello
+                    Baidu Link
                 </Button>
                 <Button btnType={ButtonType.Link} href="http://www.baidu.com" disabled>
-                    hello
+                    Disabled link
                 </Button>
                 <p>
                     Edit <code>src/App.tsx</code> and save to reload.

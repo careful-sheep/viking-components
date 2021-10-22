@@ -1,2 +1,11 @@
+/* primary config */
 @import 'variables';
+
+/* primary layout */
 @import 'roboots';
+
+/* mixin */
+@import 'mixin';
+
+/* button */
+@import './../components/button/style';
