@@ -5,7 +5,9 @@ function App() {
     return (
         <div className="App">
             <header className="App-header">
-                <Button>hello</Button>
+                <Button onClick={() => console.log('1111222')} className="allenaa">
+                    hello
+                </Button>
                 <Button disabled>disabled Button</Button>
                 <Button btnType={ButtonType.Primary} size={ButtonSize.Large}>
                     large Primary
@@ -13,7 +15,7 @@ function App() {
                 <Button btnType={ButtonType.Error} size={ButtonSize.Small}>
                     small Error
                 </Button>
-                <Button btnType={ButtonType.Link} href="http://www.baidu.com">
+                <Button btnType={ButtonType.Link} href="http://www.baidu.com" target="_blank">
                     Baidu Link
                 </Button>
                 <Button btnType={ButtonType.Link} href="http://www.baidu.com" disabled>

@@ -22,9 +22,13 @@ export interface IBaseButtonProps {
     href?: string;
 }
 
-const Button: React.FC<IBaseButtonProps> = props => {
-    const { className, disabled, size, btnType, children, href } = props;
-    const classes = classNames('btn', {
+type NativeButtonProps = IBaseButtonProps & React.ButtonHTMLAttributes<HTMLElement>;
+type AnchorButtonProps = IBaseButtonProps & React.AnchorHTMLAttributes<HTMLElement>;
+export type ButtonProps = Partial<NativeButtonProps & AnchorButtonProps>;
+
+const Button: React.FC<ButtonProps> = props => {
+    const { className, disabled, size, btnType, children, href, ...restProps } = props;
+    const classes = classNames('btn', className, {
         [`btn-${btnType}`]: btnType,
         [`btn-${size}`]: size,
         disabled: btnType === ButtonType.Link && disabled
@@ -32,14 +36,14 @@ const Button: React.FC<IBaseButtonProps> = props => {
 
     if (btnType === ButtonType.Link && href) {
         return (
-            <a className={classes} href={href}>
+            <a className={classes} href={href} {...restProps}>
                 {children}
             </a>
         );
     }
 
     return (
-        <button className={classes} disabled={disabled}>
+        <button className={classes} disabled={disabled} {...restProps}>
             {children}
         </button>
     );
