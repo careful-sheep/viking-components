@@ -1,11 +1,12 @@
 import React from 'react';
 import Button, { ButtonType, ButtonSize } from './components/button/Button';
+import Alert, { AlertType } from './components/alert/Alert';
 
-function App() {
+const App: React.FC = () => {
     return (
         <div className="App">
             <header className="App-header">
-                <Button onClick={() => console.log('1111222')} className="allenaa">
+                <Button onClick={() => console.log('button Onclick')} className="allen-viking-button">
                     hello
                 </Button>
                 <Button disabled>disabled Button</Button>
@@ -21,15 +22,11 @@ function App() {
                 <Button btnType={ButtonType.Link} href="http://www.baidu.com" disabled>
                     Disabled link
                 </Button>
-                <p>
-                    Edit <code>src/App.tsx</code> and save to reload.
-                </p>
-                <a className="App-link" href="https://reactjs.org" target="_blank" rel="noopener noreferrer">
-                    Learn React
-                </a>
+                <br />
+                <Alert type={AlertType.Info} />
             </header>
         </div>
     );
-}
+};
 
 export default App;

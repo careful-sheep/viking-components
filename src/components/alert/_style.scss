@@ -1,0 +1,8 @@
+.alert {
+    display: inline-block;
+    border: 1px solid $border-color;
+    border-radius: 2px;
+    background-color: $bg-color;
+    color: $dark;
+    padding: 8px 20px;
+}
