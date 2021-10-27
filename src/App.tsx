@@ -23,7 +23,7 @@ const App: React.FC = () => {
                     Disabled link
                 </Button>
                 <br />
-                <Alert type={AlertType.Info} />
+                <Alert type={AlertType.Error}>some message</Alert>
             </header>
         </div>
     );

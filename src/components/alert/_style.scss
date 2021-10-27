@@ -1,8 +1,35 @@
 .alert {
     display: inline-block;
-    border: 1px solid $border-color;
     border-radius: 2px;
-    background-color: $bg-color;
-    color: $dark;
-    padding: 8px 20px;
+    color: $light;
+    padding: 12px 30px 12px 20px;
+    position: fixed;
+    top: 10px;
+    left: 50vw;
+    transform: translateX(-50%);
+    background-color: $brand-color;
+
+    &-icon {
+        font-size: 10px;
+        position: absolute;
+        top: 2px;
+        right: 3px;
+
+        &:hover {
+            cursor: pointer;
+            opacity: 0.8;
+        }
+    }
+
+    &-success {
+        background-color: $green;
+    }
+
+    &-warning {
+        background-color: $warning;
+    }
+
+    &-error {
+        background-color: $error;
+    }
 }
