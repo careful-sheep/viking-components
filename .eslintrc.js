@@ -56,10 +56,13 @@ module.exports = {
                 cases: {
                     // 中划线
                     kebabCase: true,
+
                     // 小驼峰
                     camelCase: true,
+
                     // 下划线
                     snakeCase: false,
+
                     // 大驼峰
                     pascalCase: true
                 }
@@ -99,13 +102,15 @@ module.exports = {
         'react/no-unescaped-entities': OFF,
         'react/default-props-match-prop-types': OFF,
         'react/button-has-type': OFF,
+        'react/require-default-props': OFF,
 
         'jsx-a11y/click-events-have-key-events': OFF,
         'jsx-a11y/no-noninteractive-element-interactions': OFF,
         'jsx-a11y/no-static-element-interactions': OFF,
 
         'lines-between-class-members': [ERROR, 'always'],
-        'lines-around-comment': [ERROR, { beforeBlockComment: true }],
+        'lines-around-comment': [OFF, { beforeBlockComment: true }],
+
         // indent: [ERROR, 2, { SwitchCase: 1 }],
         'linebreak-style': [ERROR, 'unix'],
         quotes: [ERROR, 'single'],
@@ -120,6 +125,6 @@ module.exports = {
         'no-restricted-syntax': OFF,
         'no-continue': OFF,
         'no-multiple-empty-lines': ERROR,
-        'prettier/prettier': ['error', { trailingComma: 'none' }]
+        'prettier/prettier': [ERROR, { trailingComma: 'none' }]
     }
 };

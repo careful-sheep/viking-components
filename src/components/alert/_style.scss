@@ -1,35 +1,33 @@
-.alert {
-    display: inline-block;
-    border-radius: 2px;
-    color: $light;
-    padding: 12px 30px 12px 20px;
-    position: fixed;
-    top: 10px;
-    left: 50vw;
-    transform: translateX(-50%);
-    background-color: $brand-color;
-
-    &-icon {
-        font-size: 10px;
+$alert-colors: (
+    'default': $primary,
+    'success': $success,
+    'warning': $warning,
+    'danger': $danger
+);
+.viking-alert {
+    position: relative;
+    padding: $alert-padding-y $alert-padding-x;
+    margin-bottom: $alert-margin-bottom;
+    border: $alert-border-width solid transparent;
+    border-radius: $alert-border-radius;
+    .viking-alert-close {
         position: absolute;
-        top: 2px;
-        right: 3px;
-
-        &:hover {
-            cursor: pointer;
-            opacity: 0.8;
-        }
+        top: 0;
+        right: 0;
+        padding: $alert-padding-y $alert-padding-x;
+        color: inherit;
+        cursor: pointer;
     }
-
-    &-success {
-        background-color: $green;
+    .bold-title {
+        font-weight: $font-weight-bold;
     }
-
-    &-warning {
-        background-color: $warning;
+    .viking-alert-desc {
+        font-size: $alert-description-font-size;
+        margin: $alert-description-top-margin 0 0;
     }
-
-    &-error {
-        background-color: $error;
+}
+@each $color, $value in $alert-colors {
+    .viking-alert-#{$color} {
+        @include alert-style($value, darken($value, 5%), $white);
     }
 }
