@@ -2,7 +2,7 @@ $alert-colors: (
     'default': $primary,
     'success': $success,
     'warning': $warning,
-    'danger': $danger
+    'error': $error
 );
 .viking-alert {
     position: relative;
@@ -28,6 +28,6 @@ $alert-colors: (
 }
 @each $color, $value in $alert-colors {
     .viking-alert-#{$color} {
-        @include alert-style($value, darken($value, 5%), $white);
+        @include alert-style($value, darken($value, 5%), $gray-1);
     }
 }

@@ -1,6 +1,6 @@
 import React from 'react';
 import Button, { ButtonType, ButtonSize } from './components/button/Button';
-import Alert, { AlertType } from './components/alert/Alert';
+import Alert from './components/alert/Alert';
 
 const App: React.FC = () => {
     return (
@@ -23,7 +23,10 @@ const App: React.FC = () => {
                     Disabled link
                 </Button>
                 <br />
-                <Alert type={AlertType.Error}>some message</Alert>
+                <Alert title="this is alert!" />
+                <Alert title="this is Success" type="success" />
+                <Alert title="this is Danger!" type="error" />
+                <Alert title="this is Warning!" type="warning" closable={false} />
             </header>
         </div>
     );

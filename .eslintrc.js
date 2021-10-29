@@ -109,7 +109,16 @@ module.exports = {
         'jsx-a11y/no-static-element-interactions': OFF,
 
         'lines-between-class-members': [ERROR, 'always'],
-        'lines-around-comment': [OFF, { beforeBlockComment: true }],
+        'lines-around-comment': [
+            ERROR,
+            {
+                beforeBlockComment: true,
+                allowBlockStart: true,
+                allowClassStart: true,
+                allowArrayStart: true,
+                allowObjectStart: true
+            }
+        ],
 
         // indent: [ERROR, 2, { SwitchCase: 1 }],
         'linebreak-style': [ERROR, 'unix'],
