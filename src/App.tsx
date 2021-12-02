@@ -1,11 +1,26 @@
 import React from 'react';
 import Button, { ButtonType, ButtonSize } from './components/button/Button';
 import Alert from './components/alert/Alert';
+import Menu from './components/menu/Menu';
+import MenuItem from './components/menu/MenuItem';
 
 const App: React.FC = () => {
     return (
         <div className="App">
             <header className="App-header">
+                <Menu
+                    defaultIndex={0}
+                    onSelect={index => {
+                        alert(index);
+                    }}
+                >
+                    <MenuItem index={0}>item 0</MenuItem>
+                    <MenuItem index={1} disabled>
+                        item 1
+                    </MenuItem>
+                    <MenuItem index={2}>item 2</MenuItem>
+                    <MenuItem index={3}>item 3</MenuItem>
+                </Menu>
                 <Button onClick={() => console.log('button Onclick')} className="allen-viking-button">
                     hello
                 </Button>
